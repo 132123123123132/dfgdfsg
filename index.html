@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальная кнопка</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        .button {
+            width: 250px;
+            height: 250px;
+            background: url('miko.png') no-repeat center center/cover;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="button" onclick="playMusic()"></div>
+    <audio id="audio" src="sss.mp3"></audio>
+    <script>
+        function playMusic() {
+            let audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
